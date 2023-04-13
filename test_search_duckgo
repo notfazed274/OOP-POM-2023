@@ -1,0 +1,10 @@
+from pages.homepage import DuckDuckGoHomepage
+
+#
+
+def test_search(driver):
+    home_page = DuckDuckGoHomepage(driver)
+    home_page.open()
+    home_page.search('python')
+    assert 'python' in driver.title
+
